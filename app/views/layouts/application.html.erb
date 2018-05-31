@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title><%= yield(:title) %> | The Five Minute Website</title>
     <title>Galorerails</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +11,28 @@
   </head>
 
   <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "GUT", 'https://www.facebook.com/GaloreUrbanTech/' %>
+        <nav>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Home",  'static_pages#home' %></li>
+          <li><%= link_to "Linux",  'static_pages/linux' %></li>
+          <li><%= link_to "Windows",  'static_pages/windows' %></li>
+          <li><%= link_to "Screencasts",  '#' %></li>
+          <li><%= link_to "Join",  '#' %></li>
+          <li><%= link_to "Contact",  '#' %></li>
+          <li><%= link_to "Further",  '#' %></li>
+        </ul>
+
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+
+    <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2013/08/sinatraheroku.png" class="rounded" alt="...">
     <%= yield %>
+    </div>
   </body>
 </html>
